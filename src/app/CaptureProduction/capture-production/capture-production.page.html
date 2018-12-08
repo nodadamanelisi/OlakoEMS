@@ -1,0 +1,23 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Capture Production</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <form [formGroup]="viewModel" (ngSubmit)="Capture(viewModel)">
+    <ion-item>
+      <ion-label>Non Broken Eggs:</ion-label>
+      <ion-input type="Number" formControlName="NonBrokenEggs"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Cage defects:</ion-label>
+      <ion-input type="Number" formControlName="CageDefects"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Soft shell defects:</ion-label>
+      <ion-input type="Number" formControlName="SoftShellDefects"></ion-input>
+    </ion-item>
+    <button class="button button-full button-positive" ion-button block type="Save" [disabled]="!viewModel.valid">Save</button>
+  </form>
+</ion-content>

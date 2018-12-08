@@ -1,0 +1,7 @@
+{
+  "name": "OlakoEMS",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}
