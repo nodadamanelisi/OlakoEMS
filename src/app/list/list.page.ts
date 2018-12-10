@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { Datetime } from '@ionic/angular';
+import { Datetime , NavController, NavParams} from '@ionic/angular';
 import { CaptureProductionService } from '../CaptureProduction/capture-production.service';
-import { forEach } from '@angular/router/src/utils/collection';
+import { ProductionDetailsPage } from '../ProductionDetails/production-details/production-details.page';
 
 @Component({
   selector: 'app-list',
@@ -38,13 +38,6 @@ export class ListPage implements OnInit {
         Total: 'Total: ' + (parseInt(egg.NonBrokenEggs) + parseInt(egg.CageDefects) + parseInt(egg.SoftShellDefects))
       });
     }
-    // for (let i = 1; i < 11; i++) {
-    //   this.items.push({
-    //     title: 'Item ' + i,
-    //     note: 'This is item #' + i,
-    //     icon: this.icons[Math.floor(Math.random() * this.icons.length)]
-    //   });
-    // }
   }
 
   ngOnInit() {
@@ -63,8 +56,8 @@ export class ListPage implements OnInit {
       });
     }
   }
-  // add back when alpha.4 is out
-  // navigate(item) {
-  //   this.router.navigate(['/list', JSON.stringify(item)]);
-  // }
+
+  itemTapped(event, item) {
+    // this.navCtrl.navigateRoot(ProductionDetails);
+  }
 }

@@ -23,7 +23,7 @@ export class AppComponent {
     {
       title: 'Capture Production',
       url: '/CaptureProduction',
-      icon: 'CaptureProduction'
+      icon: 'list'
     }
   ];
 

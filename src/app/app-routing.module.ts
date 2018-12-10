@@ -18,7 +18,8 @@ const routes: Routes = [
   {
     path: 'CaptureProduction',
     loadChildren: './CaptureProduction/capture-production/capture-production.module#CaptureProductionPageModule'
-  }
+  },
+  { path: 'ProductionDetails', loadChildren: './ProductionDetails/production-details/production-details.module#ProductionDetailsPageModule' }
 ];
 
 @NgModule({

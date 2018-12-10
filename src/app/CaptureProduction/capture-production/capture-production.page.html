@@ -6,18 +6,23 @@
 
 <ion-content padding>
   <form [formGroup]="viewModel" (ngSubmit)="Capture(viewModel)">
+  <ion-list>
     <ion-item>
-      <ion-label>Non Broken Eggs:</ion-label>
+      <ion-label color="primary">Non Broken Eggs:</ion-label>
       <ion-input type="Number" formControlName="NonBrokenEggs"></ion-input>
     </ion-item>
     <ion-item>
-      <ion-label>Cage defects:</ion-label>
+      <!-- <ion-label>Cage defects:</ion-label>
+      <ion-input type="Number" formControlName="CageDefects"></ion-input> -->
+
+      <ion-label color="primary" class="stacked">Cage defects:</ion-label>
       <ion-input type="Number" formControlName="CageDefects"></ion-input>
     </ion-item>
     <ion-item>
-      <ion-label>Soft shell defects:</ion-label>
+      <ion-label color="primary" class="stacked">Soft shell defects:</ion-label>
       <ion-input type="Number" formControlName="SoftShellDefects"></ion-input>
     </ion-item>
-    <button class="button button-full button-positive" ion-button block type="Save" [disabled]="!viewModel.valid">Save</button>
+    <ion-button class="button button-full button-positive" ion-button block type="Save" [disabled]="!viewModel.valid">Save</ion-button>
+  </ion-list>
   </form>
 </ion-content>

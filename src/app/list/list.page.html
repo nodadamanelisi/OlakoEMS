@@ -12,17 +12,22 @@
 <ion-content>
   <ion-list>
     <ion-item *ngFor="let egg of eggs">
-      <!-- <ion-icon [name]="item.icon" slot="start"></ion-icon> -->
-      {{egg.DateCreated}}
-      <div class="item-note" slot="end">
-        {{ egg.Total }}
+      <div>
+        <b> {{egg.DateCreated}} </b>
+        
+          <div class="item-note" slot="end">
+              Soft Shell Defects:  {{ egg.SoftShellDefects }}
+          </div>
+          <div class="item-note" slot="end">
+              Cage Defects:  {{ egg.CageDefects }}
+          </div>
+          <div class="item-note" slot="end">
+              Non broken eggs:  {{ egg.NonBrokenEggs }}
+          </div>
+          <div class="item-note" slot="end">
+            {{ egg.Total }}
+          </div>
       </div>
     </ion-item>
-
   </ion-list>
-  <!--
-    <div *ngIf="selectedItem" padding>
-      You navigated here from <b>{{selectedItem.title }}</b>
-    </div>
-  -->
 </ion-content>
